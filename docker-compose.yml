@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+    app:
+        build: .
+        command: sh -c "python app.py"
+        image: valonjanuzaj/niceapp:v1
+        ports:
+            - "80:8000"
+        volumes:
+            - ./src:/src
